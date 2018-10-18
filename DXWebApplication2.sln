@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXApplication1", "DXApplication1\DXApplication1.csproj", "{58A68A45-53E1-4AE9-850B-CD852CD81D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportViewer", "ReportViewer\ReportViewer.csproj", "{5980C40F-4763-4980-9013-3A9C88231E71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A68A45-53E1-4AE9-850B-CD852CD81D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A68A45-53E1-4AE9-850B-CD852CD81D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A68A45-53E1-4AE9-850B-CD852CD81D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A68A45-53E1-4AE9-850B-CD852CD81D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5980C40F-4763-4980-9013-3A9C88231E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5980C40F-4763-4980-9013-3A9C88231E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5980C40F-4763-4980-9013-3A9C88231E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5980C40F-4763-4980-9013-3A9C88231E71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42F12C9B-D04A-48BC-9C93-4B550A2261A4}
+	EndGlobalSection
+EndGlobal

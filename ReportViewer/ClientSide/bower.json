@@ -1,0 +1,6 @@
+{
+  "name": "html5-document-viewer-example",
+  "dependencies": {
+    "xtrareportsjs": "~18.1.5"
+  }
+}
