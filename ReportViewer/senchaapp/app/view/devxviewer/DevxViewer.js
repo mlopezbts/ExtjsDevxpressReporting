@@ -18,27 +18,26 @@
         reportUrl: undefined
     },
     reportUrlObsv: undefined,
-    searchEnabledObsv:undefined,
     viewerOptions: {},
 
     //DocumentViewerToolbar, objeto con metodos para controlar el toolbar
     docViewerToolbar: undefined,
     toolbarActions: {
-        Design: undefined,
-        ExportTo: undefined,
-        FirstPage: undefined,
-        HightlightEditingFields: undefined,
-        LastPage: undefined,
-        MultipageToggle: undefined,
-        NextPage: undefined,
-        Pagination: undefined,
-        PrevPage: undefined,
-        Print: undefined,
-        PrintPage: undefined,
-        Search: undefined,
-        ZoomIn: undefined,
-        ZoomOut: undefined,
-        ZoomSelector: undefined
+        Design: DevExpress.Report.Preview.ActionId.Design,
+        ExportTo: DevExpress.Report.Preview.ActionId.ExportTo,
+        FirstPage: DevExpress.Report.Preview.ActionId.FirstPage,
+        HightlightEditingFields: DevExpress.Report.Preview.ActionId.FirstPage,
+        LastPage:  DevExpress.Report.Preview.ActionId.LastPage,
+        MultipageToggle: DevExpress.Report.Preview.ActionId.MultipageToggle,
+        NextPage: DevExpress.Report.Preview.ActionId.NextPage,
+        Pagination: DevExpress.Report.Preview.ActionId.Pagination,
+        PrevPage: DevExpress.Report.Preview.ActionId.PrevPage,
+        Print: DevExpress.Report.Preview.ActionId.Print,
+        PrintPage: DevExpress.Report.Preview.ActionId.PrintPage,
+        Search: DevExpress.Report.Preview.ActionId.Search,
+        ZoomIn: DevExpress.Report.Preview.ActionId.ZoomIn,
+        ZoomOut: DevExpress.Report.Preview.ActionId.ZoomOut,
+        ZoomSelector:  DevExpress.Report.Preview.ActionId.ZoomSelector
     },
 
     onRender: function () {
@@ -46,7 +45,6 @@
         this.callParent(arguments);
         this.el.on('load', this.onLoad, this);
         this.reportUrlObsv = ko.observable(this.getReportUrl());
-        this.searchEnabledObsv = ko.observable(true);
     },
 
     onLoad: function () {
@@ -71,8 +69,7 @@
                 CustomizeMenuActions: function (s, e) {
                     console.log('CustomizeMenuActions');
                     me.docViewerToolbar = e;
-                    me.searchAction =  me.docViewerToolbar.GetById(DevExpress.Report.Preview.ActionId.Search);
-                    me.searchAction.disabled = me.searchEnabledObsv;
+                    me.docViewerToolbar.Actions.forEach(function(item){ item.visible = ko.isWriteableObservable(item.visible) ? item.visible : ko.observable(true) });
                 },
                 DocumentReady: function (s, e) {
                     console.log('document ready');
@@ -96,11 +93,9 @@
     refreshReport: function () {
         var me = this;
         me.reportUrlObsv(me.getReportUrl());
-        me.searchEnabledObsv(false);
     },
 
     enableSearch:function(){
         var me = this;
-        me.searchEnabledObsv(false);
     }
 });

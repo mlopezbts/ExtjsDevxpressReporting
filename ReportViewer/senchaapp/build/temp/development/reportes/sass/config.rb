@@ -1,1 +1,1 @@
-cache_path = 'C:\temp\devexpress\DXWebApplication2\ReportViewer\senchaapp/build/.sass-cache'
+cache_path = 'C:\Users\mlopez\Documents\GitHub\ExtjsDevxpressReporting\ReportViewer\senchaapp/build/.sass-cache'
